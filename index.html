@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual English Institute</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    header {
+      background: #004080;
+      color: white;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .hidden { display: none; }
+    .lang-toggle {
+      margin-top: 1rem;
+      padding: 8px 15px;
+      border: none;
+      background: #004080;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title-en">Virtual English Institute</h1>
+    <h1 id="title-fa" class="hidden">مؤسسه مجازی زبان انگلیسی</h1>
+    <nav>
+      <a href="#courses" id="nav-courses-en">Courses</a>
+      <a href="#courses" id="nav-courses-fa" class="hidden">دوره‌ها</a>
+      <a href="#resources" id="nav-res-en">Resources</a>
+      <a href="#resources" id="nav-res-fa" class="hidden">منابع</a>
+      <a href="#contact" id="nav-contact-en">Contact</a>
+      <a href="#contact" id="nav-contact-fa" class="hidden">ارتباط</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="home">
+      <p id="welcome-en">Welcome! Learn English, IELTS, and TOEFL with us.</p>
+      <p id="welcome-fa" class="hidden">خوش آمدید! با ما انگلیسی، آیلتس و تافل بیاموزید.</p>
+    </section>
+
+    <section id="courses">
+      <h2 id="courses-en">Our Courses</h2>
+      <h2 id="courses-fa" class="hidden">دوره‌های ما</h2>
+      <ul>
+        <li id="ielts-en">IELTS Preparation</li>
+        <li id="ielts-fa" class="hidden">آمادگی آیلتس</li>
+        <li id="toefl-en">TOEFL Preparation</li>
+        <li id="toefl-fa" class="hidden">آمادگی تافل</li>
+        <li id="general-en">General English</li>
+        <li id="general-fa" class="hidden">انگلیسی عمومی</li>
+      </ul>
+    </section>
+
+    <section id="resources">
+      <h2 id="res-en">Free Resources</h2>
+      <h2 id="res-fa" class="hidden">منابع رایگان</h2>
+      <p id="res-text-en">Practice materials, videos, and study guides will be available here.</p>
+      <p id="res-text-fa" class="hidden">تمرین‌ها، ویدیوها و راهنماهای مطالعه در این بخش قرار خواهند گرفت.</p>
+    </section>
+
+    <section id="contact">
+      <h2 id="contact-en">Contact Us</h2>
+      <h2 id="contact-fa" class="hidden">تماس با ما</h2>
+      <p id="contact-text-en">Email: example@email.com</p>
+      <p id="contact-text-fa" class="hidden">ایمیل: example@email.com</p>
+    </section>
+
+    <button class="lang-toggle" onclick="toggleLang()">فارسی / English</button>
+  </div>
+
+  <script>
+    function toggleLang() {
+      let elements = document.querySelectorAll("#title-en, #title-fa, #nav-courses-en, #nav-courses-fa, #nav-res-en, #nav-res-fa, #nav-contact-en, #nav-contact-fa, #welcome-en, #welcome-fa, #courses-en, #courses-fa, #ielts-en, #ielts-fa, #toefl-en, #toefl-fa, #general-en, #general-fa, #res-en, #res-fa, #res-text-en, #res-text-fa, #contact-en, #contact-fa, #contact-text-en, #contact-text-fa");
+      elements.forEach(el => el.classList.toggle("hidden"));
+    }
+  </script>
+</body>
+</html>
